@@ -1,0 +1,49 @@
+/**/franka_0:
+  controller_manager:
+    ros__parameters:
+      update_rate: 1000
+      joint_state_broadcaster:
+        type: 'joint_state_broadcaster/JointStateBroadcaster'
+      arm_0_joint_trajectory_controller:
+        type: 'joint_trajectory_controller/JointTrajectoryController'
+  arm_0_joint_trajectory_controller:
+    ros__parameters:
+      joints: ['arm_0_fr3_joint1', 'arm_0_fr3_joint2', 'arm_0_fr3_joint3', 'arm_0_fr3_joint4', 'arm_0_fr3_joint5', 'arm_0_fr3_joint6', 'arm_0_fr3_joint7']
+      command_interfaces: ['effort']
+      state_interfaces: ['position', 'velocity']
+      gains:
+        arm_0_fr3_joint1:
+          p: 600.0
+          d: 30.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint2:
+          p: 600.0
+          d: 30.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint3:
+          p: 600.0
+          d: 30.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint4:
+          p: 600.0
+          d: 30.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint5:
+          p: 250.0
+          d: 10.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint6:
+          p: 150.0
+          d: 10.0
+          i: 0.0
+          i_clamp: 1.0
+        arm_0_fr3_joint7:
+          p: 50.0
+          d: 5.0
+          i: 0.0
+          i_clamp: 1.0
