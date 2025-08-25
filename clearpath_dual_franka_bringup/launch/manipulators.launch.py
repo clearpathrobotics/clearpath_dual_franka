@@ -52,6 +52,7 @@ def generate_launch_description():
 
     # Packages
     pkg_clearpath_dual_franka_bringup = FindPackageShare('clearpath_dual_franka_bringup')
+    pkg_clearpath_dual_franka_description = FindPackageShare('clearpath_dual_franka_description')
 
     # Launch Arguments
     arg_robot_urdf = DeclareLaunchArgument(
@@ -115,7 +116,7 @@ def generate_launch_description():
 
     # Launch files
     launch_file_manipulators_description = PathJoinSubstitution([
-      pkg_clearpath_dual_franka_bringup,
+      pkg_clearpath_dual_franka_description,
       'launch',
       'description.launch.py'])
 
